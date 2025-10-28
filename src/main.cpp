@@ -105,10 +105,10 @@ void addOffsetsForGameVersion(int version) {
     offsets = g_addresses.getOrCreate("firstPersonVehicleCam");
 
     offsets->insert("fov", version < VER_1_0_877_1_STEAM ? 80 : 84); //F3 0F 10 48 ? F3 0F 11 89 ? ? ? ?
-    offsets->insert("minPitch", version < VER_1_0_505_2_STEAM ? 808 : version < VER_1_0_877_1_STEAM ? 824 : version < VER_1_0_944_2_STEAM ? 872 : 888); //F3 0F 10 ? ? ? ? ? 0F 2F D0 72 10 F3 0F 10 ? ? 03 00 00
+    offsets->insert("minPitch", version < VER_1_0_505_2_STEAM ? 808 : version < VER_1_0_877_1_STEAM ? 824 : version < VER_1_0_944_2_STEAM ? 872 : version < VER_1_0_3586_0 ? 888 : 936); //F3 0F 10 ? ? ? ? ? 0F 2F D0 72 10 F3 0F 10 ? ? 03 00 00
     offsets->insert("maxPitch", offsets->map["minPitch"].add(4));
-    offsets->insert("minPitchExt", version < VER_1_0_505_2_STEAM ? 776 : version < VER_1_0_877_1_STEAM ? 792 : version < VER_1_0_944_2_STEAM ? 840 : 856); //F3 0F 59 87 ? ? ? ? F3 41 0F 59 C4
-    offsets->insert("maxPitchExt", version < VER_1_0_505_2_STEAM ? 780 : version < VER_1_0_877_1_STEAM ? 796 : version < VER_1_0_944_2_STEAM ? 844 : 860);
+    offsets->insert("minPitchExt", version < VER_1_0_505_2_STEAM ? 776 : version < VER_1_0_877_1_STEAM ? 792 : version < VER_1_0_944_2_STEAM ? 840 : version < VER_1_0_3586_0 ? 856 : 904); //F3 0F 59 87 ? ? ? ? F3 41 0F 59 C4
+    offsets->insert("maxPitchExt", version < VER_1_0_505_2_STEAM ? 780 : version < VER_1_0_877_1_STEAM ? 796 : version < VER_1_0_944_2_STEAM ? 844 : version < VER_1_0_3586_0 ? 860 : 908);
     offsets->insert("minSpeedForAutoCorrect", version < VER_1_0_505_2_STEAM ? 680 : version < VER_1_0_877_1_STEAM ? 696 : version < VER_1_0_944_2_STEAM ? 744 : 760); //0F 2F B0 ? ? ? ? 0F 82 ? 02 00 00
     offsets->insert("viewOffsetX", version < VER_1_0_877_1_STEAM ? 80 : 96);  //F3 44 0F 10 ? ? F3 44 0F 10 ? ? F3 44 0F 10 ? ? F3 0F 11 45 ? ? 84 ?
     offsets->insert("viewOffsetY", offsets->map["viewOffsetX"].add(4));
@@ -121,7 +121,7 @@ void addOffsetsForGameVersion(int version) {
     offsets = g_addresses.getOrCreate("thirdPersonVehicleCam");
 
     offsets->insert("fov", 48); //F3 0F 59 48 ? 0F 2F C8 72 2C
-    offsets->insert("highSpeedShakeSpeed", version < VER_1_0_505_2_STEAM ? 1176 : version < VER_1_0_944_2_STEAM ? 1192 : version < VER_1_0_1290_1_STEAM ? 1208 : 1272); //48 81 C7 ? ? ? ? 8B 6F 08 shakesettings(0x4E8)+0x10
+    offsets->insert("highSpeedShakeSpeed", version < VER_1_0_505_2_STEAM ? 1176 : version < VER_1_0_944_2_STEAM ? 1192 : version < VER_1_0_1290_1_STEAM ? 1208 : 1272); //48 81 C7 ? ? ? ? 8B 6F 08 - 48 81 C7 ? ? ? ? 8B 77 ?? shakesettings(0x4E8)+0x10
     offsets->insert("enableAutoCenter", version < VER_1_0_505_2_STEAM ? 877 : version < VER_1_0_944_2_STEAM ? 893 : version < VER_1_0_1290_1_STEAM ? 909 : 973);// //80 ? ? ? ? ? ? 75 14 48 8B 83 ? ? ? ?
     offsets->insert("autoCenterLerpScale", version < VER_1_0_505_2_STEAM ? 892 : version < VER_1_0_944_2_STEAM ? 908 : version < VER_1_0_1290_1_STEAM ? 924 : 988); //F3 0F 10 88 ? ? ? ? 73 06
     offsets->insert("followDistance", version < VER_1_0_791_2_STEAM ? 312 : version < VER_1_0_944_2_STEAM ? 320 : version < VER_1_0_1290_1_STEAM ? 328 : 360); //F3 0F 10 80 ? ? ? ? C3 4C 8B 81 ? ? ? ? 49 81 C0 ? ? ? ?
