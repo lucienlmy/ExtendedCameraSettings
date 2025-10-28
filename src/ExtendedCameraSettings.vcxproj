@@ -23,6 +23,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Utility\AddressMgr.cpp" />
+    <ClCompile Include="Utility\Exceptions.cpp" />
     <ClCompile Include="Utility\General.cpp" />
     <ClCompile Include="Utility\Hooking.cpp" />
     <ClCompile Include="Utility\Logger.cpp" />
@@ -42,6 +43,7 @@
     <ClInclude Include="types.h" />
     <ClInclude Include="Utility\AddressMgr.h" />
     <ClInclude Include="Utility\config.h" />
+    <ClInclude Include="Utility\Exceptions.h" />
     <ClInclude Include="Utility\General.h" />
     <ClInclude Include="Utility\Hooking.h" />
     <ClInclude Include="Utility\keymap.h" />
@@ -50,6 +52,7 @@
     <ClInclude Include="Utility\MemAddr.h" />
     <ClInclude Include="Utility\patch.h" />
     <ClInclude Include="Utility\pattern.h" />
+    <ClInclude Include="Utility\Trace.h" />
     <ClInclude Include="Utility\XMLHelper.h" />
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +167,8 @@
       <AdditionalOptions>../lib/ScriptHookV.lib</AdditionalOptions>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" "D:\Games\Rockstar Games\Grand Theft Auto V\asi\$(ProjectName).asi"</Command>
+      <Command>copy "$(TargetPath)" "D:\Rockstar Games\Grand Theft Auto V Legacy\asi\$(ProjectName).asi"
+copy "$(OutDir)$(TargetName).pdb" "D:\Rockstar Games\Grand Theft Auto V Legacy\asi\$(ProjectName).pdb"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1138,3 +1138,8 @@ inline void showSubtitle(const char * msg, int duration = 5000) {
 
     UI::_DRAW_SUBTITLE_TIMED(duration, 1);
 }
+
+inline bool isEnhancedVersion() {
+
+    return false;
+}

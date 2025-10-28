@@ -14,7 +14,7 @@ extern AddressMgr g_addresses;
 #define WriteDouble(a,b)(*(double*)a = b)
 #define WriteBool(a,b)(*(bool*)a = b)
 
-//#define RLB_DEBUG
+#define RLB_DEBUG
 
 #include <windows.h>
 
@@ -42,6 +42,7 @@ extern AddressMgr g_addresses;
 #include "Utility/patch.h"
 #include "Utility/Pattern.h"
 #include "Utility/Hooking.h"
+#include "Utility/Exceptions.h"
 
 #include "types.h"
 #include "enums.h"

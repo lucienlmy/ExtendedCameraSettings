@@ -42,6 +42,9 @@
     <ClCompile Include="..\tinyxml2\tinyxml2.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Utility\Exceptions.cpp">
+      <Filter>src\Utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="types.h">
@@ -106,6 +109,12 @@
     </ClInclude>
     <ClInclude Include="..\tinyxml2\tinyxml2.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Exceptions.h">
+      <Filter>src\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Trace.h">
+      <Filter>src\Utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
